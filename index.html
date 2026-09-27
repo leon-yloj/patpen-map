@@ -4,21 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>PATPEN - Carte du patrimoine de Pénestin</title>
+<title>PATPEN</title>
 
-<link rel="stylesheet"
-href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+html,body{
+margin:0;
+padding:0;
+height:100%;
 }
 
-#map {
-    width: 100%;
-    height: 100vh;
+#map{
+width:100%;
+height:100vh;
 }
 </style>
 
@@ -32,27 +31,24 @@ html, body {
 
 <script>
 
-// Centre de Pénestin
-const map = L.map("map").setView(
-    [47.482, -2.475],
-    13
+const map = L.map('map').setView(
+[47.482,-2.475],
+13
 );
 
-// Fond OpenStreetMap
 L.tileLayer(
-    "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-    {
-        attribution: "&copy; OpenStreetMap"
-    }
+'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+{
+attribution:'© OpenStreetMap'
+}
 ).addTo(map);
 
-// Marqueur de test
 L.marker(
-    [47.482, -2.475]
+[47.482,-2.475]
 )
 .addTo(map)
 .bindPopup(
-    "<b>PATPEN</b><br>Carte du patrimoine de Pénestin"
+'PATPEN - Pénestin'
 );
 
 </script>
